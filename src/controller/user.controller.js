@@ -61,8 +61,8 @@ if(!finduser){
  const loggedinUser = await User.findById(finduser._id).select("-password -refreshToken");
  const options ={
     httpOnly: true,
-    secure : true,
-    sameSite:"lax",
+    secure : false,
+    sameSite:"None",
     maxAge: 24*60*60*1000
  }
    return res
